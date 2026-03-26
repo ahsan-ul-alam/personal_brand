@@ -3,7 +3,13 @@
 import { useState } from "react";
 import { MapPin, Mail, Phone, Clock3 } from "lucide-react";
 
-import { FaTwitter, FaLinkedinIn, FaGithub, FaGlobe } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaLinkedinIn,
+  FaGithub,
+  FaGlobe,
+  FaFacebook,
+} from "react-icons/fa";
 
 const contactInfo = [
   {
@@ -14,12 +20,12 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "yourmail@example.com",
+    value: "ahsanulalam.500@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+880 1XXX-XXXXXX",
+    value: "+880 177 376 6658",
   },
   {
     icon: Clock3,
@@ -29,10 +35,21 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { name: "Twitter", icon: FaTwitter, href: "#" },
-  { name: "LinkedIn", icon: FaLinkedinIn, href: "#" },
-  { name: "GitHub", icon: FaGithub, href: "#" },
-  { name: "Portfolio", icon: FaGlobe, href: "#" },
+  {
+    name: "LinkedIn",
+    icon: FaLinkedinIn,
+    href: "https://www.linkedin.com/in/ahsan-ul-alam/",
+  },
+  {
+    name: "GitHub",
+    icon: FaGithub,
+    href: "https://github.com/ahsan-ul-alam",
+  },
+  {
+    name: "Facebook",
+    icon: FaFacebook,
+    href: "https://www.facebook.com/ahsan.alam.official",
+  },
 ];
 
 export default function Contact() {
