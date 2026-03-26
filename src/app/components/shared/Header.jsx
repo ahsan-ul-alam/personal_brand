@@ -66,12 +66,12 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             {/* Contact */}
-            <a
-              href="#contact"
+            <Link
+              href="contact"
               className="inline-block border-2 border-[#F5A623] text-gray-900 text-[13px] font-bold tracking-wider px-5 py-2.5 transition-colors duration-200 hover:bg-[#F5A623] no-underline"
             >
               Contact Now
-            </a>
+            </Link>
 
             {/* Resume */}
             <a
