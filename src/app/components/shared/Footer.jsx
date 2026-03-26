@@ -38,13 +38,13 @@ export default function Footer() {
         {/* Nav Links */}
         <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
           {links.map((link) => (
-            <a
+            <Link
               key={link}
               href={`${link.toLowerCase()}`}
               className="text-sm text-gray-400 hover:text-white transition-colors duration-150"
             >
               {link}
-            </a>
+            </Link>
           ))}
         </nav>
 
