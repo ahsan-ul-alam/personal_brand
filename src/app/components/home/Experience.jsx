@@ -184,9 +184,14 @@ export default function Experience() {
             </div>
 
             {/* Hire Me button */}
-            <button className="mt-6 bg-yellow-400 hover:bg-yellow-500 active:scale-95 transition-all duration-150 text-gray-900 font-bold text-sm sm:text-base px-10 py-3 rounded-md shadow-md tracking-wide">
+            <a
+              href="https://wa.me/+8801773766658"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 bg-yellow-400 hover:bg-yellow-500 active:scale-95 transition-all duration-150 text-gray-900 font-bold text-sm sm:text-base px-10 py-3 rounded-md shadow-md tracking-wide"
+            >
               Hire me
-            </button>
+            </a>
 
             {/* Quote Card */}
             <div className="mt-6 w-full max-w-sm border border-gray-200 rounded-xl p-5 bg-white shadow-sm hover:shadow-md transition-all duration-300">
