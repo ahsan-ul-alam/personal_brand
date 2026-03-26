@@ -31,13 +31,14 @@ export default function Hero() {
               </div>
 
               {/* Image */}
-              <div className="relative w-full aspect-[3/4] bg-gray-100 overflow-hidden">
+              <div className="relative w-full aspect-[3/4] overflow-hidden bg-gray-100">
                 <Image
                   src="https://res.cloudinary.com/dpijcljrw/image/upload/v1774540267/ahsan_pucrvn_ny0ajo.jpg"
                   alt="Ahsan - Full Stack Developer"
                   fill
-                  className="object-cover object-center"
                   priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                  className="object-cover object-center"
                 />
               </div>
             </div>
