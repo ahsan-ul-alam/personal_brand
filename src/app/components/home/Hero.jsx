@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-white md:min-h-[80vh]">
+    <section className="relative flex min-h-[70vh] justify-around items-center overflow-hidden bg-white md:min-h-[80vh]">
       <div className="mx-auto w-full max-w-screen-xl px-4 py-12 md:py-16 lg:px-0">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:gap-12">
           {/* Right Image */}
           <div className="relative order-1 flex w-full items-center justify-center md:order-2 md:flex-1">
             {/* Arrow decoration */}
             <svg
-              className="absolute -right-8 top-4 hidden h-16 w-16 text-[#6C63FF] md:block"
+              className="absolute -right-1 top-4 hidden h-16 w-16 text-[#6C63FF] md:block"
               viewBox="0 0 60 60"
               fill="none"
               stroke="currentColor"
@@ -31,7 +31,7 @@ export default function Hero() {
               {/* Image */}
               <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
                 <Image
-                  src="https://res.cloudinary.com/dpijcljrw/image/upload/f_auto,q_auto,w_700/v1774540267/ahsan_pucrvn_ny0ajo.jpg"
+                  src="https://res.cloudinary.com/dpijcljrw/image/upload/f_auto,q_auto,w_800/v1774540267/ahsan_pucrvn_ny0ajo.jpg"
                   alt="Ahsan - Full Stack Developer"
                   fill
                   priority
@@ -44,15 +44,15 @@ export default function Hero() {
             </div>
 
             {/* Bottom decoration */}
-            <span className="absolute right-2 -bottom-4 hidden select-none text-2xl font-light text-[#F5A623] sm:block">
+            <span className="absolute right-2 -bottom-4 hidden select-none text-5xl font-light text-[#F5A623] sm:block">
               +
             </span>
           </div>
 
           {/* Left Content */}
-          <div className="relative order-2 w-full max-w-xl text-center md:order-1 md:flex-1 md:text-left">
+          <div className="relative order-2 w-full max-w-2xl text-center md:order-1 md:flex-1 md:text-left">
             {/* Top decoration */}
-            <span className="absolute -left-6 -top-10 hidden select-none text-3xl font-light text-[#F5A623] md:block">
+            <span className="absolute -left-6 -top-10 hidden select-none text-4xl font-light text-[#F5A623] md:block">
               +
             </span>
 
@@ -64,7 +64,7 @@ export default function Hero() {
             </div>
 
             {/* Heading */}
-            <h1 className="mb-5 text-3xl font-extrabold leading-tight text-gray-900 sm:text-5xl lg:text-6xl">
+            <h1 className="mb-5 text-3xl font-bold leading-tight text-gray-900 sm:text-5xl lg:text-6xl">
               Hi, I&apos;m Ahsan,
               <br />
               A Full Stack
