@@ -64,12 +64,24 @@ export default function Header() {
           </nav>
 
           {/* Desktop CTA */}
-          <Link
-            href="/contact"
-            className="hidden md:inline-block flex-shrink-0 border-2 border-[#F5A623] text-gray-900 text-[13px] font-bold tracking-wider px-5 py-2.5 transition-colors duration-200 hover:bg-[#F5A623] no-underline"
-          >
-            Contact Now
-          </Link>
+          <div className="hidden md:flex items-center gap-3">
+            {/* Contact */}
+            <a
+              href="#contact"
+              className="inline-block border-2 border-[#F5A623] text-gray-900 text-[13px] font-bold tracking-wider px-5 py-2.5 transition-colors duration-200 hover:bg-[#F5A623] no-underline"
+            >
+              Contact Now
+            </a>
+
+            {/* Resume */}
+            <a
+              href="https://drive.google.com/file/d/1NeK0v4I2tJJKfpmJOo9PATbSs5INcxiJ/view?usp=sharing"
+              target="_blank"
+              className="inline-block border-2 border-gray-900 text-gray-900 text-[13px] font-bold tracking-wider px-5 py-2.5 transition-colors duration-200 hover:bg-gray-900 hover:text-white no-underline"
+            >
+              Resume
+            </a>
+          </div>
 
           {/* Hamburger — mobile only */}
           <button
@@ -179,6 +191,13 @@ export default function Header() {
           >
             Contact Now
           </Link>
+          <a
+            href="https://drive.google.com/file/d/1NeK0v4I2tJJKfpmJOo9PATbSs5INcxiJ/view?usp=sharing"
+            download
+            className="mt-3 block text-center border-2 border-[#F5A623] px-5 py-3.5 text-[13px] font-bold tracking-wide text-gray-900 transition-colors duration-200 hover:bg-[#F5A623] no-underline"
+          >
+            Resume
+          </a>
         </div>
       </div>
     </>
