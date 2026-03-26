@@ -31,7 +31,7 @@ export default function Hero() {
               {/* Image */}
               <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
                 <Image
-                  src="https://res.cloudinary.com/dpijcljrw/image/upload/f_auto,q_auto,w_800/v1774540267/ahsan_pucrvn_ny0ajo.jpg"
+                  src="https://res.cloudinary.com/dpijcljrw/image/upload/f_auto,q_auto,w_700/v1774540267/ahsan_pucrvn_ny0ajo.jpg"
                   alt="Ahsan - Full Stack Developer"
                   fill
                   priority
