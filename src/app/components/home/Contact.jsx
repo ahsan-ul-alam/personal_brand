@@ -1,15 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { MapPin, Mail, Phone, Clock3 } from "lucide-react";
-
-import {
-  FaTwitter,
-  FaLinkedinIn,
-  FaGithub,
-  FaGlobe,
-  FaFacebook,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaFacebook } from "react-icons/fa";
 
 const contactInfo = [
   {
@@ -59,7 +53,9 @@ export default function Contact() {
     subject: "",
     message: "",
   });
+
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm((prev) => ({
@@ -68,13 +64,49 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = () => {
-    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) return;
-    setSubmitted(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      alert("Please fill in your name, email, and message.");
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          subject: form.subject || "New Contact Message",
+          message: form.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      );
+
+      setSubmitted(true);
+      setForm({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      alert("Something went wrong while sending your message.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <section className="w-full bg-white py-16 sm:py-20 lg:py-24" id="contact">
+    <section
+      id="contact"
+      className="w-full bg-white py-16 sm:py-20 lg:py-24 scroll-mt-24"
+    >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-10">
         {/* Header */}
         <div className="mb-12 text-center sm:mb-14">
@@ -142,10 +174,12 @@ export default function Contact() {
                       <a
                         key={social.name}
                         href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         aria-label={social.name}
                         className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 transition-all duration-200 hover:border-indigo-500 hover:bg-indigo-500 hover:text-white"
                       >
-                        <Icon className="h-4.5 w-4.5" strokeWidth={2} />
+                        <Icon className="h-4 w-4" />
                       </a>
                     );
                   })}
@@ -173,15 +207,7 @@ export default function Contact() {
                   </p>
 
                   <button
-                    onClick={() => {
-                      setSubmitted(false);
-                      setForm({
-                        name: "",
-                        email: "",
-                        subject: "",
-                        message: "",
-                      });
-                    }}
+                    onClick={() => setSubmitted(false)}
                     className="mt-6 font-semibold text-indigo-600 transition hover:text-indigo-700 hover:underline"
                   >
                     Send another message
@@ -199,7 +225,7 @@ export default function Contact() {
                     </p>
                   </div>
 
-                  <div className="space-y-5">
+                  <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                       <div>
                         <label className="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-gray-500">
@@ -259,12 +285,13 @@ export default function Contact() {
                     </div>
 
                     <button
-                      onClick={handleSubmit}
-                      className="inline-flex w-full items-center justify-center rounded-2xl bg-indigo-500 px-6 py-3.5 text-sm font-bold tracking-wide text-white shadow-md transition-all duration-200 hover:bg-indigo-600 hover:shadow-indigo-100 active:scale-[0.99]"
+                      type="submit"
+                      disabled={loading}
+                      className="inline-flex w-full items-center justify-center rounded-2xl bg-indigo-500 px-6 py-3.5 text-sm font-bold tracking-wide text-white shadow-md transition-all duration-200 hover:bg-indigo-600 hover:shadow-indigo-100 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-70"
                     >
-                      Send Message →
+                      {loading ? "Sending..." : "Send Message →"}
                     </button>
-                  </div>
+                  </form>
                 </div>
               )}
             </div>
