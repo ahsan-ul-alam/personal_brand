@@ -63,7 +63,10 @@ export default function LatestProjects() {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <section className="w-full bg-[#faf6ee] py-14 px-4 sm:px-8 lg:px-16 font-sans">
+    <section
+      className="w-full bg-[#faf6ee] py-14 px-4 sm:px-8 lg:px-16 scroll-mt-20"
+      id="projects"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-10">

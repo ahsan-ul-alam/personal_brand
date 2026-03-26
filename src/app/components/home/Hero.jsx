@@ -82,13 +82,13 @@ export default function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link
-                href="/contact"
+                href="#contact"
                 className="inline-block text-center bg-[#6C63FF] text-white text-sm font-semibold px-7 py-3.5 hover:bg-[#574fd6] transition-colors duration-200 no-underline"
               >
                 Let's Work Together
               </Link>
               <Link
-                href="/projects"
+                href="#projects"
                 className="inline-block text-center border border-gray-900 text-gray-900 text-sm font-semibold px-7 py-3.5 hover:bg-gray-900 hover:text-white transition-colors duration-200 no-underline"
               >
                 View Projects
