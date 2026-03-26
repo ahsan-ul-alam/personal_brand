@@ -1,3 +1,4 @@
+import Contact from "./components/home/Contact";
 import Experience from "./components/home/Experience";
 import Hero from "./components/home/Hero";
 import LatestProjects from "./components/home/Projects";
@@ -10,6 +11,7 @@ export default function Home() {
       <Services />
       <Experience />
       <LatestProjects />
+      <Contact />
     </>
   );
 }
