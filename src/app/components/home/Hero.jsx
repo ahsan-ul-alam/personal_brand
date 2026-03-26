@@ -1,192 +1,103 @@
 "use client";
+
 import Image from "next/image";
-import { useState } from "react";
+import Link from "next/link";
 
-const Hero = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const stats = [
-    { value: "4", label: "Years Experience" },
-    { value: "200+", label: "Projects Completed" },
-    { value: "300+", label: "Happy Clients" },
-  ];
-
-  const handleCVDownload = () => window.open("/ahsan_ul_alam.pdf", "_blank");
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    closeModal();
-  };
-
+export default function Hero() {
   return (
-    <>
-      {/* ── Section ── */}
-      <section className="relative flex flex-col overflow-hidden px-[60px] pt-[40px] pb-[60px] min-h-[calc(100vh-80px)] max-w-7xl mx-auto">
-        {/* Decorative crosshairs */}
-        <span className="absolute top-[18px] left-[80px] text-[#2a4a6a] text-[22px] font-light select-none">
-          +
-        </span>
-        <span className="absolute top-[18px] right-[80px] text-[#2a4a6a] text-[22px] font-light select-none">
-          +
-        </span>
+    <section className="bg-white min-h-[80vh] flex items-center overflow-hidden relative">
+      <div className="max-w-screen-xl mx-auto px-8 md:px-0 w-full py-16">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* ── Left Content ── */}
+          <div className="flex-1 relative">
+            {/* Decoration */}
+            <span className="absolute -left-6 -top-10 text-[#F5A623] text-3xl font-light select-none">
+              +
+            </span>
 
-        {/* ── Content row ── */}
-        <div className="flex flex-1 items-center justify-between gap-10 mt-5">
-          {/* ── Left ── */}
-          <div className="flex-1 max-w-[580px]">
-            <h1 className="text-[clamp(42px,5vw,68px)] font-extrabold text-white leading-[1.1] mb-6 font-[Poppins,sans-serif]">
-              Hello, I&apos;m
-              <span className="block text-[#00BFFF]">Ahsan Ul Alam</span>
+            {/* Badge */}
+            <div className="inline-block mb-6">
+              <span className="border border-[#6C63FF] text-[#6C63FF] text-xs font-semibold px-3 py-1 rotate-[-6deg] inline-block tracking-wide">
+                Portfolio
+              </span>
+            </div>
+
+            {/* Heading */}
+            <h1 className="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+              Hi, I'm Ahsan
+              <br />
+              Full Stack
+              <br />
+              Web Developer
             </h1>
 
-            <p className="text-base text-[#a0b0c8] leading-[1.8] font-[Poppins,sans-serif] mb-9 max-w-[520px]">
-              I&apos;m a Freelance{" "}
-              <span className="text-[#00BFFF] font-medium">
-                Software Architect
-              </span>{" "}
-              and{" "}
-              <span className="text-[#00BFFF] font-medium">
-                Full Stack Developer
-              </span>{" "}
-              based in Dhaka, Bangladesh. I strive to build immersive and
-              beautiful web applications through carefully crafted code and
-              user-centric design.
+            {/* Description */}
+            <p className="text-gray-500 text-base leading-relaxed max-w-sm mb-10">
+              I build modern, scalable, and high-performance websites and web
+              applications using technologies like React, Next.js, php and
+              Laravel. I help businesses turn ideas into powerful digital
+              solutions.
             </p>
 
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-4 mb-[52px]">
-              <button
-                onClick={handleCVDownload}
-                className="flex items-center gap-[10px] bg-gradient-to-br from-[#00BFFF] to-[#1a6fff] text-white border-none rounded-full px-7 py-[14px] text-[15px] font-semibold font-[Poppins,sans-serif] cursor-pointer shadow-[0_4px_24px_rgba(0,191,255,0.4)]"
+            {/* CTA */}
+            <div className="flex gap-4 flex-wrap">
+              <Link
+                href="/contact"
+                className="inline-block bg-[#6C63FF] text-white text-sm font-semibold px-7 py-3.5 hover:bg-[#574fd6] transition-colors duration-200 no-underline"
               >
-                Download CV
-                <span className="flex items-center justify-center bg-white/25 rounded-full w-[30px] h-[30px]">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path
-                      d="M8 3v7M5 7l3 3 3-3M3 13h10"
-                      stroke="#fff"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-              </button>
+                Let's Work Together
+              </Link>
 
-              <button
-                onClick={openModal}
-                className="flex items-center gap-[10px] bg-transparent text-white border-2 border-white/30 rounded-full px-7 py-[14px] text-[15px] font-semibold font-[Poppins,sans-serif] cursor-pointer"
+              <Link
+                href="/projects"
+                className="inline-block border border-gray-900 text-gray-900 text-sm font-semibold px-7 py-3.5 hover:bg-gray-900 hover:text-white transition"
               >
-                Get a Quote
-                <span className="flex items-center justify-center bg-white/15 rounded-full w-[30px] h-[30px]">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path
-                      d="M3 8h10M9 4l4 4-4 4"
-                      stroke="#fff"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </div>
-
-            {/* Stats */}
-            <div className="flex">
-              {stats.map((stat, i) => (
-                <div
-                  key={stat.label}
-                  className="relative flex flex-col items-center gap-1 bg-white/5 rounded-xl px-8 py-5 mr-[2px] min-w-[140px]"
-                >
-                  <span className="text-[36px] font-extrabold text-white leading-[1.1] font-[Poppins,sans-serif]">
-                    {stat.value}
-                  </span>
-                  <span className="text-[13px] text-[#8090a8] font-[Poppins,sans-serif] text-center">
-                    {stat.label}
-                  </span>
-                  {i < stats.length - 1 && (
-                    <div className="absolute right-[-1px] top-[20%] h-[60%] w-px bg-white/10" />
-                  )}
-                </div>
-              ))}
+                View Projects
+              </Link>
             </div>
           </div>
 
-          {/* ── Right — Image Card ── */}
-          <div className="flex-none flex items-center justify-center">
-            <div className="w-[400px] h-[520px] border-2 border-[rgba(0,191,255,0.3)] rounded-[20px] overflow-hidden bg-gradient-to-br from-[#0d1929] to-[#0a1220] shadow-[0_0_60px_rgba(0,100,255,0.1)]">
-              <Image
-                src="https://res.cloudinary.com/dpijcljrw/image/upload/v1772135029/ahsan_pucrvn.png"
-                alt="Ahsan Ul Alam — Software Architect & Full Stack Developer"
-                width={400}
-                height={520}
-                priority
-                unoptimized
-                className="w-full h-full object-cover object-top"
-              />
+          {/* ── Right Image ── */}
+          <div className="flex-1 flex justify-center items-center relative">
+            {/* Arrow decoration */}
+            <svg
+              className="absolute -right-8 top-4 w-16 h-16 text-[#6C63FF]"
+              viewBox="0 0 60 60"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <polyline points="10,50 40,20 40,40" />
+              <polyline points="22,20 40,20" />
+            </svg>
+
+            {/* Frame */}
+            <div className="border-2 border-gray-900 w-full max-w-md relative">
+              {/* Top bar */}
+              <div className="flex items-center justify-end gap-1.5 px-3 py-2 border-b-2 border-gray-900">
+                <span className="w-3 h-3 rounded-full bg-[#6C63FF]" />
+                <span className="w-3 h-3 rounded-full bg-[#F5A623]" />
+              </div>
+
+              {/* Image */}
+              <div className="relative w-full aspect-[3/4] bg-gray-100 overflow-hidden p-4">
+                <Image
+                  src="https://res.cloudinary.com/dpijcljrw/image/upload/v1774540267/ahsan_pucrvn_ny0ajo.jpg"
+                  alt="Ahsan - Full Stack Developer"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                />
+              </div>
             </div>
+
+            {/* Decoration */}
+            <span className="absolute right-0 -bottom-6 text-[#F5A623] text-2xl font-light select-none">
+              +
+            </span>
           </div>
         </div>
-      </section>
-
-      {/* ── Modal (outside section to avoid overflow:hidden clipping) ── */}
-      {isModalOpen && (
-        <div
-          className="fixed inset-0 flex items-center justify-center z-50 bg-black/55 backdrop-blur-sm"
-          onClick={(e) => e.target === e.currentTarget && closeModal()}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="quote-modal-title"
-        >
-          <div className="relative bg-white rounded-2xl p-9 w-full max-w-[440px] shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
-            <button
-              onClick={closeModal}
-              aria-label="Close modal"
-              className="absolute top-[14px] right-[18px] bg-transparent border-none text-2xl font-bold text-gray-500 cursor-pointer leading-none hover:text-gray-800 transition-colors"
-            >
-              ×
-            </button>
-
-            <h2
-              id="quote-modal-title"
-              className="text-[22px] font-bold text-[#1a1a2e] font-[Poppins,sans-serif] mb-5"
-            >
-              Get a Quote
-            </h2>
-
-            <form onSubmit={handleSubmit} className="flex flex-col gap-[14px]">
-              <input
-                type="text"
-                placeholder="Your Name"
-                required
-                className="border border-[#e0e0e0] rounded-lg px-[14px] py-[10px] text-sm font-[Poppins,sans-serif] outline-none w-full text-[#333] focus:border-[#00BFFF] transition-colors"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                required
-                className="border border-[#e0e0e0] rounded-lg px-[14px] py-[10px] text-sm font-[Poppins,sans-serif] outline-none w-full text-[#333] focus:border-[#00BFFF] transition-colors"
-              />
-              <textarea
-                placeholder="Project Details"
-                rows={4}
-                required
-                className="border border-[#e0e0e0] rounded-lg px-[14px] py-[10px] text-sm font-[Poppins,sans-serif] outline-none w-full text-[#333] resize-y focus:border-[#00BFFF] transition-colors"
-              />
-              <button
-                type="submit"
-                className="bg-gradient-to-br from-[#00BFFF] to-[#1a6fff] text-white border-none rounded-lg py-3 text-[15px] font-semibold font-[Poppins,sans-serif] cursor-pointer shadow-[0_4px_16px_rgba(0,191,255,0.35)] hover:opacity-90 transition-opacity"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
-    </>
+      </div>
+    </section>
   );
-};
-
-export default Hero;
+}
