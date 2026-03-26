@@ -26,7 +26,7 @@ const skills = [
   { icon: "📦", label: "SQLite", color: "bg-gray-600" },
 
   // Tools
-  { icon: "🔧", label: "Git", color: "bg-orange-600" },
+  { icon: "🔧", label: "Git & Github", color: "bg-orange-600" },
 ];
 
 const experiences = [
@@ -117,7 +117,7 @@ export default function Experience() {
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 md:mt-6">
           {/* Experience List */}
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -187,6 +187,23 @@ export default function Experience() {
             <button className="mt-6 bg-yellow-400 hover:bg-yellow-500 active:scale-95 transition-all duration-150 text-gray-900 font-bold text-sm sm:text-base px-10 py-3 rounded-md shadow-md tracking-wide">
               Hire me
             </button>
+
+            {/* Quote Card */}
+            <div className="mt-6 w-full max-w-sm border border-gray-200 rounded-xl p-5 bg-white shadow-sm hover:shadow-md transition-all duration-300">
+              {/* Quote icon */}
+              <span className="text-3xl text-[#F5A623] leading-none">“</span>
+
+              {/* Text */}
+              <p className="mt-2 text-sm sm:text-base text-gray-600 leading-relaxed">
+                I build scalable, high-performance web applications that solve
+                real business problems and deliver measurable results.
+              </p>
+
+              {/* Author */}
+              <p className="mt-4 text-xs text-gray-400 tracking-wide">
+                — Ahsan, Full Stack Developer
+              </p>
+            </div>
           </div>
         </div>
       </div>
