@@ -64,11 +64,11 @@ export default function Hero() {
 
             {/* Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-5">
-              Hi, I'm Ahsan
+              Hi, I'm Ahsan,
               <br />
-              Full Stack
+              A Full Stack
               <br />
-              Web Developer
+              Web app Developer
             </h1>
 
             {/* Description */}
