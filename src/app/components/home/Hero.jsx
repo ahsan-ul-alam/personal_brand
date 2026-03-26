@@ -73,11 +73,15 @@ export default function Hero() {
             </h1>
 
             {/* Description */}
-            <p className="mx-auto mb-8 max-w-sm text-sm leading-relaxed text-gray-500 sm:text-base md:mx-0">
+            <p className="mx-auto mb-6 max-w-sm text-sm leading-relaxed text-gray-500 sm:text-base md:mx-0">
               I build modern, scalable, and high-performance websites and web
               applications using technologies like React, Next.js, PHP, and
               Laravel. I help businesses turn ideas into powerful digital
               solutions.
+            </p>
+
+            <p className="mx-auto mb-8 max-w-sm text-sm leading-relaxed text-gray-800 sm:text-base md:mx-0">
+              🟢 A Full Stack Developer specializing in React, Next.js & Laravel
             </p>
 
             {/* CTA Buttons */}
