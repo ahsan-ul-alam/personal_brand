@@ -45,6 +45,10 @@ export const metadata = {
       "Full Stack Developer specializing in React, Next.js & Laravel.",
     images: ["/ahsan_alam.jpg"],
   },
+
+  alternates: {
+    canonical: "https://ahsanalam.online",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -1,5 +1,11 @@
 import Contact from "../components/home/Contact";
 
+export const metadata = {
+  alternates: {
+    canonical: "/contact",
+  },
+};
+
 export default function page() {
   return (
     <>

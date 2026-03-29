@@ -4,6 +4,12 @@ import Hero from "./components/home/Hero";
 import LatestProjects from "./components/home/Projects";
 import Services from "./components/home/Services";
 
+export const metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
+
 export default function Home() {
   return (
     <>
