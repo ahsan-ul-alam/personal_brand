@@ -31,7 +31,7 @@ export default function Hero() {
               {/* Image */}
               <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
                 <Image
-                  src="https://res.cloudinary.com/dpijcljrw/image/upload/f_auto,q_auto,w_700/v1774540267/ahsan_pucrvn_ny0ajo.jpg"
+                  src="https://res.cloudinary.com/dpijcljrw/image/upload/f_auto,q_auto,dpr_auto,c_fill,g_auto,w_600/v1774540267/ahsan_pucrvn_ny0ajo.jpg"
                   alt="Ahsan - Full Stack Developer"
                   fill
                   priority
@@ -39,6 +39,7 @@ export default function Hero() {
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
                   sizes="(max-width: 640px) 220px, (max-width: 768px) 280px, (max-width: 1200px) 50vw, 40vw"
                   className="object-cover object-center"
+                  quality={70}
                 />
               </div>
             </div>
