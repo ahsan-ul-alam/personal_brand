@@ -36,7 +36,7 @@ const experiences = [
     company: "Sardar IT",
   },
   {
-    period: "Dec 2024 - Jun 2025",
+    period: "Apr 2025 - Jun 2025",
     title: "Full Stack Laravel Developer",
     company: "Wazih Premium, Dhaka",
   },
