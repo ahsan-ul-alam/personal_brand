@@ -31,7 +31,7 @@ const skills = [
 
 const experiences = [
   {
-    period: "Sep 2025 - Present",
+    period: "Sep 2025 - Mar 2026",
     title: "Dept. Head - Full Stack Development",
     company: "Sardar IT",
   },
