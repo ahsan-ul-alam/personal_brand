@@ -57,6 +57,60 @@ const projects = [
     bg: "bg-sky-100",
     url: "https://oxaxie.vercel.app",
   },
+  {
+    id: 7,
+    title: "Qr and key ring with quote",
+    category: "Web/Next.js",
+    image:
+      "https://res.cloudinary.com/dpijcljrw/image/upload/q_auto/f_auto/v1775143154/qr_key_bowtg5.png",
+    bg: "bg-sky-100",
+    url: "https://key-and-qr.vercel.app",
+  },
+  {
+    id: 8,
+    title: "Tradtional music and culture",
+    category: "Web/Laravel+Next.js (Api + Frontend)",
+    image:
+      "https://res.cloudinary.com/dpijcljrw/image/upload/q_auto/f_auto/v1775143455/gulf_music_csx05b.png",
+    bg: "bg-sky-100",
+    url: "https://gulfcoastmusic.live",
+  },
+  {
+    id: 9,
+    title: "Complete Hospital Management System",
+    category: "Web/Laravel-api-Next.js",
+    image:
+      "https://res.cloudinary.com/dpijcljrw/image/upload/q_auto/f_auto/v1775143758/med_ease_xd6v5i.png",
+    bg: "bg-sky-100",
+    url: null,
+  },
+  {
+    id: 10,
+    title: "Complete Gamified Learning Management System",
+    category: "Web/Laravel-api-Next.js",
+    image:
+      "https://res.cloudinary.com/dpijcljrw/image/upload/q_auto/f_auto/v1775144136/lms_mah835.png",
+    bg: "bg-sky-100",
+    url: "https://high-end-multipurpose-lms.vercel.app",
+  },
+  {
+    id: 11,
+    title: "AI Powered Real Estate Listing and Search Platform",
+    category: "Web/Laravel-api-Next.js",
+    image:
+      "https://res.cloudinary.com/dpijcljrw/image/upload/q_auto/f_auto/v1775145271/ai_powered_real_state_jjio10.png",
+    bg: "bg-sky-100",
+    url: "https://cherif-ahsan.vercel.app",
+  },
+  {
+    id: 12,
+    title: "Home Service Providers hub",
+    category: "Web/Next.js",
+    image:
+      "https://res.cloudinary.com/dpijcljrw/image/upload/q_auto/f_auto/v1775145147/HVAC_bxnvtj.png",
+    bg: "bg-sky-100",
+    url: "https://home-service-project-livid.vercel.app",
+  },
 ];
 
 export default function LatestProjects() {
@@ -115,7 +169,15 @@ export default function LatestProjects() {
 
                 {/* Arrow Button */}
                 <a
-                  href={project.url}
+                  href={project.url || "#"}
+                  onClick={(e) => {
+                    if (!project.url) {
+                      e.preventDefault();
+                      alert(
+                        "This project is under NDA, please contact me for more details.",
+                      );
+                    }
+                  }}
                   className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-all duration-200 ${
                     hovered === project.id
                       ? "bg-indigo-600 scale-110"
