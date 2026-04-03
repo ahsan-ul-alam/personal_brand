@@ -20,6 +20,71 @@ export const metadata = {
 
   metadataBase: new URL("https://ahsanalam.online"),
 
+  keywords: [
+    "Ahsan Alam",
+    "Ahsan Ul Alam",
+    "Ahsan Alam Developer",
+    "Ahsan Alam Portfolio",
+    "Learn With Ahsan",
+    "Freelance Web Developer Bangladesh",
+
+    "Full Stack Developer",
+    "Full Stack Web Developer Bangladesh",
+    "Professional Web Developer",
+    "Freelance Web Developer",
+    "Remote Full Stack Developer",
+
+    "Laravel Developer",
+    "Laravel Expert Developer",
+    "PHP Developer",
+    "PHP Backend Developer",
+    "Next.js Developer",
+    "Next.js Portfolio Developer",
+    "React Developer",
+    "React Frontend Developer",
+
+    "Web Developer Dhaka",
+    "Bangladesh Web Developer",
+    "Hire Web Developer Bangladesh",
+
+    "REST API Developer",
+    "MySQL Database Developer",
+    "Scalable Web Application Developer",
+    "High Performance Website Developer",
+    "Secure Web Application Developer",
+
+    "Ecommerce Developer",
+    "Ecommerce Website Developer",
+    "Custom Web Application Developer",
+    "ERP Developer",
+    "CRM Developer",
+    "SaaS Application Developer",
+
+    "Portfolio Website Developer",
+    "Modern Web Developer",
+    "AI Web Developer",
+  ],
+
+  authors: [{ name: "Ahsan Alam", url: "https://ahsanalam.online" }],
+  creator: "Ahsan Alam",
+  publisher: "Ahsan Alam",
+
+  alternates: {
+    canonical: "https://ahsanalam.online",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
   openGraph: {
     title: "Ahsan Alam | Full Stack Web Developer",
     description:
@@ -46,16 +111,19 @@ export const metadata = {
     images: ["/ahsan_alam.jpg"],
   },
 
-  alternates: {
-    canonical: "https://ahsanalam.online",
-  },
+  category: "technology",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-HSRCWVX5C7"
           strategy="afterInteractive"
