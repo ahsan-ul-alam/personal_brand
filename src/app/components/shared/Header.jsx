@@ -51,7 +51,7 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                target={link.target}
+                target={link?.target}
                 onClick={() => setActive(link.label)}
                 className={[
                   "text-[13px] font-semibold tracking-widest px-4 py-1.5 rounded-full transition-colors duration-200 no-underline",
