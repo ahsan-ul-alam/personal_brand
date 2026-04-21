@@ -7,7 +7,7 @@ const navLinks = [
   { label: "HOME", href: "/" },
   { label: "SKILLS", href: "/skills" },
   { label: "PORTFOLIO", href: "/portfolio" },
-  { label: "GITHUB", href: "https://github.com/ahsan-ul-alam" },
+  { label: "GITHUB", href: "https://github.com/ahsan-ul-alam", target:"_blank" },
 ];
 
 export default function Header() {
@@ -51,6 +51,7 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
+                target={link.target}
                 onClick={() => setActive(link.label)}
                 className={[
                   "text-[13px] font-semibold tracking-widest px-4 py-1.5 rounded-full transition-colors duration-200 no-underline",
