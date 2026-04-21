@@ -7,6 +7,7 @@ const navLinks = [
   { label: "HOME", href: "/" },
   { label: "SKILLS", href: "/skills" },
   { label: "PORTFOLIO", href: "/portfolio" },
+  { label: "GITHUB", href: "https://github.com/ahsan-ul-alam" },
 ];
 
 export default function Header() {
@@ -75,7 +76,7 @@ export default function Header() {
 
             {/* Resume */}
             <a
-              href="https://drive.google.com/file/d/1NeK0v4I2tJJKfpmJOo9PATbSs5INcxiJ/view?usp=sharing"
+              href="https://drive.google.com/file/d/1uupSTbq2flmZ-gKZgZSZ9hUXez7ZS6Lj/view?usp=sharing"
               target="_blank"
               className="inline-block border-2 border-gray-900 text-gray-900 text-[13px] font-bold tracking-wider px-5 py-2.5 transition-colors duration-200 hover:bg-gray-900 hover:text-white no-underline"
             >
