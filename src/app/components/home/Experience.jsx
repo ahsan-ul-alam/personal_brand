@@ -24,12 +24,18 @@ const skills = [
   { icon: "🗄️", label: "MySQL", color: "bg-blue-600" },
   { icon: "🐘", label: "PostgreSQL", color: "bg-indigo-700" },
   { icon: "📦", label: "SQLite", color: "bg-gray-600" },
+  { icon: "🍃", label: "MongoDB", color: "bg-green-500" },
 
   // Tools
   { icon: "🔧", label: "Git & Github", color: "bg-orange-600" },
 ];
 
 const experiences = [
+  {
+    period: "Jun 2026 - Present",
+    title: "Senior Software Engineer",
+    company: "Deshfiri",
+  },
   {
     period: "Aug 2025 - Mar 2026",
     title: "Dept. Head - Full Stack Development",
